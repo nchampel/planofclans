@@ -1,8 +1,0 @@
-CREATE TABLE profiles
-(
-    id INT PRIMARY KEY NOT NULL,
-    pseudo VARCHAR(100) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    last_login DATETIME
-) ENGINE=InnoDB;
