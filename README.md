@@ -12,3 +12,8 @@ commencement du projet plan of clans
 pour démarrer react :
 cd planofclans-react
 npm start
+
+    15/04/2023 = coté Front/Angular
+
+    - Création de la home page + login
+    - Entrain de rajouter la route private du Login pour la suite 
