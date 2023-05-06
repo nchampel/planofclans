@@ -1,6 +1,7 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { ErrorMessage, Formik } from "formik";
 import * as Yup from "yup";
+import { apiRef } from "../api/apiRef";
 function Login() {
   return (
     <Formik
@@ -14,13 +15,17 @@ function Login() {
         { setErrors, setStatus, setSubmitting, resetForm }
       ) => {
         try {
-          console.log(values);
           // const jsonAnswer = await customerApi.addCommentCommercial(
           //   customerId,
           //   user.id,
           //   values,
           //   localStorage.getItem("accessToken")
           // );
+          const data = await apiRef.login(
+            process.env.REACT_APP_URL + "App/Calls/login.php",
+            values
+          );
+          console.log(data);
           setStatus({ success: true });
           resetForm({});
           setSubmitting(false);
