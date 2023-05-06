@@ -10,21 +10,20 @@ import {
 } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./components/Home";
-import Connected from "./components/Connected";
 import Game from "./components/Game";
+import Login from "./components/Login";
 
 function App() {
   return (
     <Routes>
       <Route path={"/"} element={<Home />}></Route>
-      <Route path={"/login"} element={<Connected />}></Route>
+      <Route path={"/login"} element={<Login />}></Route>
       <Route
         path={"/game"}
         element={
-          <PrivateRoute
-            isAuthenticated={true}
-            component={<Game />}
-          ></PrivateRoute>
+          <PrivateRoute isAuthenticated={true}>
+            <Game />
+          </PrivateRoute>
         }
       ></Route>
     </Routes>

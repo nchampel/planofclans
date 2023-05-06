@@ -12,9 +12,8 @@ import Game from "./Game";
 // };
 
 const PrivateRoute = (props) => {
-  //   console.log(component);
-  const { isAuthenticated, component } = props;
-  return isAuthenticated ? component : <Navigate to="/login" />;
+  const { isAuthenticated } = props;
+  return isAuthenticated ? props.children : <Navigate to="/login" />;
 };
 
 export default PrivateRoute;
