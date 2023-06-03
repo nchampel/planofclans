@@ -16,4 +16,8 @@ npm start
     15/04/2023 = coté Front/Angular
 
     - Création de la home page + login
-    - Entrain de rajouter la route private du Login pour la suite 
+    - Entrain de rajouter la route private du Login pour la suite
+
+03/06/2023
+
+l'option password_default est utilisée pour les hachages
